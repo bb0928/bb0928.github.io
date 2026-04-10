@@ -1,62 +1,81 @@
-# Website notes
+# Homepage Maintenance Notes
 
-This file summarizes the main editable content for `bb0928.github.io` so the homepage and project pages are easy to maintain later.
+用于记录 `bb0928.github.io` 个人主页的核心要点，后续改主页时先看这个文件。
 
-## Site structure
+## 1. 当前站点结构
 
-- `/index.html` — personal academic homepage
-- `/forge/index.html` — FORGE project page
-- `/assets/site.css` — shared styling for the homepage and FORGE page
-- `/assets/profile-placeholder.svg` — temporary profile photo placeholder
-- `/assets/pipeline-placeholder.svg` — temporary FORGE pipeline placeholder
-- `/cv.pdf` — optional CV file for the homepage (currently present locally but not linked publicly yet)
+- `/index.html`：个人主页主页面
+- `/forge/index.html`：FORGE 项目页
+- `/assets/site.css`：主页和 FORGE 页共享样式
+- `/assets/profile-placeholder.svg`：当前头像占位图
+- `/assets/pipeline-placeholder.svg`：FORGE 流程图占位图
+- `/cv.pdf`：本地已有 CV 文件，后续可直接挂到主页链接
 
-## Homepage content summary
+## 2. 主页核心信息
 
-### Hero / About
-- Name: Liangjun Xing
-- Current status: second-year Master's student
-- Department: Department of Automation, Tsinghua University
-- Lab: BBNC Lab
-- Advisor: Prof. Yebin Liu
-- Previous degree: B.E. in Automation, Xi’an Jiaotong University
-- Main research: humanoid loco-manipulation, dexterous hands, world models, high-level planning, whole-body control
+### 基本身份
 
-### Biography
-- Previous internship: Shanghai AI Lab
-- Collaborators mentioned by user: Kailin Li, Jingbo Wang, Jiangmiao Pang
-- Long-term goal: become a full-stack robotics researcher and engineer building humanoid autonomous systems for home service
-- Opportunity note: looking for 2027 job / PhD opportunities
-- Misc: enjoys Chinese classical poetry, costume dramas, Mandopop (especially Stefanie Sun), piano, singing, photography, aerobic exercise, and traveling
+- 姓名：Liangjun Xing
+- 当前身份：Tsinghua University，Department of Automation，Master Student
+- 实验室：BBNC Lab
+- 导师：Prof. Yebin Liu
+- 本科院校：Xi’an Jiaotong University
+- 本科专业：Automation
 
-### Projects currently listed on homepage
-1. FORGE — dedicated project page under `/forge/`
+### 研究方向
+
+- Humanoid robot loco-manipulation
+- Dexterous hands
+- World models
+- High-level planning
+- Whole-body control
+
+### 个人简介要点
+
+- 曾在 Shanghai AI Lab 实习
+- 合作者提及：Kailin Li、Jingbo Wang、Jiangmiao Pang
+- 长期目标：做 full-stack robotics researcher / engineer，构建面向家庭环境服务的 humanoid autonomous systems
+- 当前状态：Looking for 2027 job / PhD opportunities
+
+### 兴趣爱好
+
+- Chinese classical poetry
+- Costume dramas
+- Mandopop，尤其是 Stefanie Sun
+- Piano
+- Singing
+- Photography
+- Aerobic exercise
+- Traveling
+
+## 3. 当前主页项目列表
+
+1. FORGE
 2. Humanoid Loco-Manipulation System
 3. Motion Tracing Methods for Dexterous-Hand Manipulation
 4. Humanoid Robots Playing Soccer
 5. A 4D World-Model for Robotic Arms Based on Gaussian Splatting
 
-## Remaining placeholders to replace
+## 4. 待补全内容
 
-### Homepage
-- Replace `/assets/profile-placeholder.svg` with a real profile image if desired
-- Replace contact email placeholder in `/index.html`
-- Replace Google Scholar link placeholder in `/index.html`
-- Replace LinkedIn link placeholder in `/index.html`
-- Optionally add DBLP / personal CV / publication links
+- 替换头像：`/assets/profile-placeholder.svg`
+- 替换联系邮箱：`/index.html`
+- 补上 Google Scholar 链接：`/index.html`
+- 补上 LinkedIn 链接：`/index.html`
+- 决定是否公开 `cv.pdf`
+- FORGE 页面补充真实论文信息、摘要、代码链接、BibTeX 和最终图片
 
-### FORGE page
-- Replace author names and affiliation
-- Replace the one-line project summary
-- Replace arXiv / PDF / Code / Video placeholders
-- Replace abstract text
-- Replace pipeline placeholder with final figure
-- Replace BibTeX placeholder
+## 5. 布局维护约定
 
-## Quick edit guide
+- Hero 区左侧放个人介绍和按钮，右侧只放头像卡片与 Quick Info
+- 头像在上，Quick Info 在下，避免两者并排挤在窄列中
+- Quick Info 使用纵向信息项展示，不再用一句话塞满一整行
+- 移动端下 hero 区改为单列，头像、Quick Info、正文顺序保持可读性
 
-- Update homepage text: edit `/index.html`
-- Update FORGE content: edit `/forge/index.html`
-- Update styling: edit `/assets/site.css`
-- Update CV: replace `/cv.pdf`
-- Update profile image: replace `/assets/profile-placeholder.svg` with an actual image and update the image path in `/index.html`
+## 6. 常改位置
+
+- 修改主页文案：`/index.html`
+- 修改主页样式：`/assets/site.css`
+- 修改 FORGE 文案：`/forge/index.html`
+- 替换头像：更新图片文件并同步改 `/index.html`
+- 更新 CV：替换 `/cv.pdf`
