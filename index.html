@@ -26,31 +26,37 @@
     <section class="hero" id="about">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">Academic Homepage</span>
-          <h1>Your Name</h1>
+          <span class="eyebrow">Master Student · Tsinghua University</span>
+          <h1>Liangjun Xing</h1>
           <p class="lead">
-            PhD Student / Researcher / Faculty placeholder. Replace this with a concise introduction covering your area,
-            institution, and the topics you work on.
+            I am a second-year Master's student in the Department of Automation at Tsinghua University, advised by Prof. Yebin Liu in the BBNC Lab. I received my bachelor's degree from Xi’an Jiaotong University and work on humanoid robot loco-manipulation and dexterous hands, spanning world models, high-level planning, and whole-body control.
           </p>
           <div class="button-row">
             <a class="button primary" href="/forge/">View FORGE project</a>
-            <a class="button" href="#publications">Selected publications</a>
+            <a class="button" href="#publications">Selected projects</a>
             <a class="button" href="#contact">Contact</a>
           </div>
         </div>
 
-        <aside class="hero-card">
-          <h3>Quick Info</h3>
-          <p class="bio">
-            This homepage is inspired by classic academic templates such as AcademicPages, but kept as a lightweight static site for GitHub Pages.
-          </p>
-          <ul class="meta-list">
-            <li><span class="meta-label">Affiliation</span> Institution / Lab Name</li>
-            <li><span class="meta-label">Email</span> yourname@institution.edu</li>
-            <li><span class="meta-label">Research</span> Vision, Robotics, Foundation Models</li>
-            <li><span class="meta-label">GitHub</span> <a href="https://github.com/bb0928" target="_blank" rel="noopener noreferrer">bb0928</a></li>
-          </ul>
-        </aside>
+        <div class="grid-2">
+          <aside class="hero-card">
+            <h3>Quick Info</h3>
+            <ul class="meta-list">
+              <li><span class="meta-label">Affiliation</span> Department of Automation, Tsinghua University</li>
+              <li><span class="meta-label">Lab</span> BBNC Lab</li>
+              <li><span class="meta-label">Advisor</span> Prof. Yebin Liu</li>
+              <li><span class="meta-label">Previous Degree</span> Xi’an Jiaotong University, B.E. in Automation</li>
+              <li><span class="meta-label">Research</span> Humanoid loco-manipulation, dexterous hands, world models, whole-body control</li>
+              <li><span class="meta-label">Status</span> Looking for 2027 job / PhD opportunities</li>
+              <li><span class="meta-label">GitHub</span> <a href="https://github.com/bb0928" target="_blank" rel="noopener noreferrer">bb0928</a></li>
+            </ul>
+          </aside>
+
+          <aside class="hero-card profile-card">
+            <img src="/assets/profile-placeholder.svg" alt="Profile photo placeholder" />
+            <div class="profile-caption">Replace with your personal photo later.</div>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -60,19 +66,21 @@
       </div>
       <div class="grid-2">
         <div class="card">
-          <h3>Bio</h3>
+          <h3>Biography</h3>
           <p>
-            Write a short bio here. A common pattern is 4-6 sentences introducing your background, your current position,
-            your advisor or lab, and the broader goal of your research.
+            Previously, I had a wonderful internship experience at Shanghai AI Lab, where I worked closely with Kailin Li, Jingbo Wang, and Jiangmiao Pang. My dream is to become a full-stack robotics researcher and engineer and build humanoid autonomous systems that can serve in home environments.
+          </p>
+          <p style="margin-top: 12px;">
+            I am currently looking for 2027 job and PhD opportunities. Feel free to reach out by email if you would like to discuss research, collaboration, or future opportunities.
           </p>
         </div>
         <div class="card">
           <h3>Interests</h3>
           <ul>
-            <li>Embodied AI and robot learning</li>
-            <li>Generative models for decision making</li>
-            <li>Multimodal perception and control</li>
-            <li>Scalable data-driven robotics</li>
+            <li>Humanoid robot loco-manipulation in unstructured environments</li>
+            <li>Dexterous hand manipulation and whole-body coordination</li>
+            <li>World models and high-level planning for embodied agents</li>
+            <li>End-to-end systems from perception to deployment</li>
           </ul>
         </div>
       </div>
@@ -80,14 +88,14 @@
 
     <section class="section" id="publications">
       <div class="section-header">
-        <h2>Selected Publications & Projects</h2>
+        <h2>Selected Projects</h2>
       </div>
       <div class="projects">
         <article class="project-card">
-          <span class="project-tag">Highlighted project</span>
+          <span class="project-tag">Highlighted project page</span>
           <h3>FORGE</h3>
           <p>
-            Dedicated paper page for FORGE with project links, abstract, pipeline figure, and BibTeX.
+            Dedicated project page for FORGE with links, abstract, pipeline figure, and BibTeX. This page is hosted separately under <code>/forge/</code> so it can evolve independently from the personal homepage.
           </p>
           <div class="small-links">
             <a href="/forge/">Project page</a>
@@ -96,51 +104,96 @@
           </div>
         </article>
 
-        <article class="entry">
-          <div class="entry-title">
-            <h3>Paper / Project Title Placeholder</h3>
-            <span class="entry-meta">Conference / Journal 2026</span>
-          </div>
-          <p>
-            Author 1, <strong>Your Name</strong>, Author 3. Replace this item with your publication list or keep only a few selected papers.
-          </p>
-          <div class="small-links">
-            <a href="#">Paper</a>
-            <a href="#">Code</a>
-            <a href="#">Video</a>
-          </div>
-        </article>
+        <div class="project-grid">
+          <article class="entry">
+            <div class="entry-title">
+              <h3>Humanoid Loco-Manipulation System</h3>
+              <span class="entry-meta">Shanghai AI Lab Internship · 09/2025–Present</span>
+            </div>
+            <p>
+              Developed a unified reinforcement learning policy and teleoperation system for humanoid robot loco-manipulation and manipulation without demonstration data, supporting torque-based hybrid force-position control across the whole body.
+            </p>
+            <ul>
+              <li>Implemented a high-frequency multimodal data collection pipeline in C++ at 30 Hz.</li>
+              <li>Integrated RGB-D images, LiDAR point clouds, proprioceptive states, SLAM localization, and high-level control commands.</li>
+              <li>Constructed a high-level command generation framework on collected data using diffusion policies and VLA models.</li>
+              <li>Submitted a first-author paper to RSS 2026.</li>
+            </ul>
+          </article>
 
-        <article class="entry">
-          <div class="entry-title">
-            <h3>Another Research Item Placeholder</h3>
-            <span class="entry-meta">Preprint / Workshop</span>
-          </div>
-          <p>
-            Use this area for a second selected publication, an ongoing project, or a link to a full publication list / Google Scholar profile.
-          </p>
-        </article>
+          <article class="entry">
+            <div class="entry-title">
+              <h3>Motion Tracing Methods for Dexterous-Hand Manipulation</h3>
+              <span class="entry-meta">Master's Research Project · 09/2024–Present</span>
+            </div>
+            <p>
+              Research on retargeting and policy learning for dexterous manipulation from MoCap data to articulated object interaction.
+            </p>
+            <ul>
+              <li>Optimized the retargeting pipeline from MoCap data to dexterous-hand interactions.</li>
+              <li>Designed reward functions for reinforcement learning on articulated object manipulation.</li>
+              <li>Addressed task expansion challenges using policy distillation modules.</li>
+              <li>Adapted motion generation methods to various kinds of dexterous hands.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-title">
+              <h3>Humanoid Robots Playing Soccer</h3>
+              <span class="entry-meta">Unitree Internship · 05/2025–08/2025</span>
+            </div>
+            <p>
+              Contributed technical support to the Tsinghua University THMOS RoboCup team as a Unitree intern and team member, with a focus on motion deployment and decision-making for the Unitree G1 humanoid.
+            </p>
+            <ul>
+              <li>Developed decision-making algorithms and trained/deployed fall-recovery motions on the C1 robot.</li>
+              <li>Implemented a 2-DoF head servo camera control pipeline integrated with perception-driven visual tracking.</li>
+              <li>Helped the team win 4th prize at RoboCup 2025 in Brazil.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-title">
+              <h3>A 4D World-Model for Robotic Arms Based on Gaussian Splatting</h3>
+              <span class="entry-meta">ICRA 2026</span>
+            </div>
+            <p>
+              Proposed a V-4D-A framework with Gaussian Action Field for direct action inference, showing bi-manual dexterous manipulation capability in RLBench tasks and real-world deployment.
+            </p>
+            <ul>
+              <li>Achieved a +11.54 dB PSNR and -0.56 LPIPS improvement.</li>
+              <li>Boosted robotic task success rate by 10.33% over SOTA methods.</li>
+              <li>Accepted by ICRA 2026.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section" id="contact">
       <div class="section-header">
-        <h2>Links & Contact</h2>
+        <h2>Links, Contact & Misc.</h2>
       </div>
       <div class="grid-2">
         <div class="card">
           <h3>Profiles</h3>
           <div class="small-links">
             <a href="https://github.com/bb0928" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
             <a href="#" target="_blank" rel="noopener noreferrer">CV</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">DBLP</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
         <div class="card">
           <h3>Contact</h3>
           <p>
-            Add your preferred contact method here. Many academic homepages simply list email, office/lab, and optionally collaboration interests.
+            Email: please replace this placeholder with your preferred academic email address. I am actively looking for 2027 job and PhD opportunities and welcome research and collaboration inquiries.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Misc.</h3>
+          <p>
+            I have broad interests beyond research. I enjoy Chinese classical poetry and costume dramas, and I love listening to Mandopop, especially Stefanie Sun. I also enjoy playing piano, singing, photography, aerobic exercise, and traveling.
           </p>
         </div>
       </div>
@@ -148,7 +201,7 @@
   </main>
 
   <footer>
-    Personal academic homepage for <code>bb0928.github.io</code>. Replace placeholders with your actual profile, publications, and links.
+    Liangjun Xing's academic homepage on <code>bb0928.github.io</code>. Replace remaining placeholders such as email, profile photo, and external profile links when ready.
   </footer>
 </body>
 </html>
