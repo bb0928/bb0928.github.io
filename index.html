@@ -3,218 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FORGE</title>
+  <title>bb0928 | Academic Homepage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --text: #222;
-      --muted: #666;
-      --border: #e5e7eb;
-      --bg-soft: #f8fafc;
-      --primary: #1f6feb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.65;
-    }
-
-    .container {
-      width: min(980px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 48px 0 72px;
-    }
-
-    .hero {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      font-size: clamp(2.3rem, 5vw, 3.4rem);
-      margin: 0 0 12px;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitle {
-      max-width: 760px;
-      margin: 0 auto 18px;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .authors,
-    .affiliations,
-    .meta {
-      text-align: center;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 28px 0 12px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #fff;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.2s ease;
-    }
-
-    .button:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-    }
-
-    .section {
-      margin-top: 44px;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      margin-bottom: 14px;
-      text-align: center;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    .card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .figure {
-      margin: 40px 0;
-      text-align: center;
-    }
-
-    .figure img {
-      width: 100%;
-      max-width: 920px;
-      height: auto;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: #fff;
-    }
-
-    .caption {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .placeholder {
-      width: 100%;
-      max-width: 920px;
-      margin: 0 auto;
-      border: 2px dashed #cbd5e1;
-      border-radius: 18px;
-      padding: 54px 20px;
-      color: var(--muted);
-      background: #f8fafc;
-      font-size: 1rem;
-    }
-
-    pre {
-      margin: 0;
-      white-space: pre-wrap;
-      word-break: break-word;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.95rem;
-    }
-
-    footer {
-      margin-top: 52px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">bb0928</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="container">
-    <section class="hero">
-      <h1>FORGE</h1>
-      <p class="subtitle">
-        Project page for FORGE. Replace this one-line summary with your paper tagline or contribution statement.
-      </p>
-      <div class="authors">Author 1, Author 2, Author 3</div>
-      <div class="affiliations">Institution / Lab Name</div>
-      <div class="meta">GitHub Pages homepage for <strong>bb0928</strong></div>
-      <div class="links">
-        <a class="button" href="#" target="_blank" rel="noopener noreferrer">arXiv</a>
-        <a class="button" href="#" target="_blank" rel="noopener noreferrer">PDF</a>
-        <a class="button" href="#" target="_blank" rel="noopener noreferrer">Code</a>
-        <a class="button" href="#" target="_blank" rel="noopener noreferrer">Video</a>
+    <section class="hero" id="about">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Academic Homepage</span>
+          <h1>Your Name</h1>
+          <p class="lead">
+            PhD Student / Researcher / Faculty placeholder. Replace this with a concise introduction covering your area,
+            institution, and the topics you work on.
+          </p>
+          <div class="button-row">
+            <a class="button primary" href="/forge/">View FORGE project</a>
+            <a class="button" href="#publications">Selected publications</a>
+            <a class="button" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3>Quick Info</h3>
+          <p class="bio">
+            This homepage is inspired by classic academic templates such as AcademicPages, but kept as a lightweight static site for GitHub Pages.
+          </p>
+          <ul class="meta-list">
+            <li><span class="meta-label">Affiliation</span> Institution / Lab Name</li>
+            <li><span class="meta-label">Email</span> yourname@institution.edu</li>
+            <li><span class="meta-label">Research</span> Vision, Robotics, Foundation Models</li>
+            <li><span class="meta-label">GitHub</span> <a href="https://github.com/bb0928" target="_blank" rel="noopener noreferrer">bb0928</a></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Abstract</h2>
-      <div class="card">
-        <p>
-          Add your abstract here. A good project-page abstract is usually one short paragraph covering the problem,
-          the core idea of FORGE, and the main results.
-        </p>
+    <section class="section" id="research">
+      <div class="section-header">
+        <h2>Research</h2>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Bio</h3>
+          <p>
+            Write a short bio here. A common pattern is 4-6 sentences introducing your background, your current position,
+            your advisor or lab, and the broader goal of your research.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Interests</h3>
+          <ul>
+            <li>Embodied AI and robot learning</li>
+            <li>Generative models for decision making</li>
+            <li>Multimodal perception and control</li>
+            <li>Scalable data-driven robotics</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="section figure">
-      <h2>Pipeline Overview</h2>
-      <img src="assets/pipeline-placeholder.svg" alt="FORGE pipeline placeholder" />
-      <div class="caption">Figure 1. Overall pipeline of FORGE. Replace <code>assets/pipeline-placeholder.svg</code> with your final pipeline image later.</div>
-    </section>
+    <section class="section" id="publications">
+      <div class="section-header">
+        <h2>Selected Publications & Projects</h2>
+      </div>
+      <div class="projects">
+        <article class="project-card">
+          <span class="project-tag">Highlighted project</span>
+          <h3>FORGE</h3>
+          <p>
+            Dedicated paper page for FORGE with project links, abstract, pipeline figure, and BibTeX.
+          </p>
+          <div class="small-links">
+            <a href="/forge/">Project page</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </article>
 
-    <section class="section">
-      <h2>Method</h2>
-      <div class="card">
-        <p>
-          Use this section to describe the main components of your method. If you want a more complete paper page later,
-          you can add teaser results, qualitative comparisons, videos, and BibTeX below.
-        </p>
+        <article class="entry">
+          <div class="entry-title">
+            <h3>Paper / Project Title Placeholder</h3>
+            <span class="entry-meta">Conference / Journal 2026</span>
+          </div>
+          <p>
+            Author 1, <strong>Your Name</strong>, Author 3. Replace this item with your publication list or keep only a few selected papers.
+          </p>
+          <div class="small-links">
+            <a href="#">Paper</a>
+            <a href="#">Code</a>
+            <a href="#">Video</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-title">
+            <h3>Another Research Item Placeholder</h3>
+            <span class="entry-meta">Preprint / Workshop</span>
+          </div>
+          <p>
+            Use this area for a second selected publication, an ongoing project, or a link to a full publication list / Google Scholar profile.
+          </p>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <h2>BibTeX</h2>
-      <div class="card">
-        <pre>@article{forge2026,
-  title={FORGE},
-  author={Author 1 and Author 2 and Author 3},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2026}
-}</pre>
+    <section class="section" id="contact">
+      <div class="section-header">
+        <h2>Links & Contact</h2>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Profiles</h3>
+          <div class="small-links">
+            <a href="https://github.com/bb0928" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">CV</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">DBLP</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p>
+            Add your preferred contact method here. Many academic homepages simply list email, office/lab, and optionally collaboration interests.
+          </p>
+        </div>
       </div>
     </section>
-
-    <footer>
-      Adapted for a simple academic project page and ready for GitHub Pages deployment.
-    </footer>
   </main>
+
+  <footer>
+    Personal academic homepage for <code>bb0928.github.io</code>. Replace placeholders with your actual profile, publications, and links.
+  </footer>
 </body>
 </html>
