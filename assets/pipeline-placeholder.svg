@@ -1,0 +1,7 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="24" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1200" height="640" rx="20" stroke="#CBD5E1" stroke-width="4" stroke-dasharray="14 14"/>
+  <text x="640" y="300" text-anchor="middle" fill="#334155" font-family="Arial, sans-serif" font-size="40" font-weight="700">FORGE pipeline figure placeholder</text>
+  <text x="640" y="370" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" font-size="28">Replace with assets/pipeline.png</text>
+  <text x="640" y="430" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" font-size="24">Suggested export: white background, 1600px wide or more</text>
+</svg>
