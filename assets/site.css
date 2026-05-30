@@ -314,6 +314,16 @@ h1 {
   margin-top: 14px;
 }
 
+.entry-figure {
+  margin: 12px 0;
+}
+
+.entry-figure img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
 .entry-title {
   display: flex;
   justify-content: space-between;
