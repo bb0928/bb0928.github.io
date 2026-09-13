@@ -378,7 +378,7 @@
               </figure>
             </article>
 
-            <article class="result-story reverse">
+            <article class="result-story">
               <div class="result-copy">
                 <span class="result-tag">Force estimation</span>
                 <h3>Hybrid estimates track an independent force reference</h3>
@@ -387,35 +387,6 @@
                   yields lower RMSE and MAE than observer-only and learned-only
                   variants.
                 </p>
-                <table class="metrics-table">
-                  <caption class="figure-note">
-                    Hybrid estimator · Representative traces
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Axis</th>
-                      <th scope="col">RMSE (N)</th>
-                      <th scope="col">MAE (N)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">x</th>
-                      <td>0.81</td>
-                      <td>0.50</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">y</th>
-                      <td>1.97</td>
-                      <td>1.57</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">z</th>
-                      <td>0.87</td>
-                      <td>0.67</td>
-                    </tr>
-                  </tbody>
-                </table>
               </div>
               <figure>
                 <a
@@ -484,12 +455,10 @@
                 Trained from 320 demonstrations and evaluated over 20 hardware
                 trials per payload.
               </p>
-              <div class="payload-grid" aria-label="Success rates by payload">
-                <div><strong>100%</strong><span>Empty</span></div>
-                <div><strong>100%</strong><span>0.5 kg</span></div>
-                <div><strong>90%</strong><span>1 kg</span></div>
-                <div><strong>90%</strong><span>2 kg</span></div>
-              </div>
+              <p class="payload-summary">
+                Success rates were 100% for empty and 0.5 kg payloads, and 90%
+                for 1 kg and 2 kg payloads.
+              </p>
               <p class="scope-note">
                 This result validates the upstream-planner/downstream-controller
                 interface over the evaluated payload conditions.
