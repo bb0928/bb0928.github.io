@@ -31,32 +31,22 @@
       <div class="topbar-inner">
         <a class="brand" href="#">FORGE</a>
         <nav class="nav" aria-label="Project navigation">
-          <a href="#video">Demo</a>
           <a href="#method">Method</a>
-          <a href="#results">Results</a>
+          <a href="#video">Video</a>
+          <a href="#results">Experiments</a>
           <a href="#bibtex">BibTeX</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="forge-hero">
-        <div class="forge-shell forge-hero-copy">
-          <span class="status-pill"
-            >Humanoid loco-manipulation · Research project</span
-          >
-          <h1>FORGE</h1>
-          <p class="forge-title">
-            Force-Aware Multi-Granularity Control for Efficient Humanoid
+      <header class="paper-header">
+        <div class="forge-shell">
+          <h1>
+            FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid
             Loco-Manipulation
-          </p>
-          <p class="forge-lead">
-            A unified whole-body controller that moves naturally between
-            velocity navigation, precise footholds, bilateral wrist poses, and
-            force-conditioned contact adaptation—without full-body motion
-            references or wrist force/torque sensors.
-          </p>
-          <div class="links forge-actions">
+          </h1>
+          <div class="forge-actions">
             <a
               class="button primary"
               href="/forge/forge-paper.pdf"
@@ -71,176 +61,29 @@
               rel="noopener noreferrer"
               >Code</a
             >
-            <a
-              class="button"
-              href="https://www.bilibili.com/video/BV1qkYa6zEx6/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Demo Video</a
-            >
+            <a class="button" href="#video">Video</a>
           </div>
         </div>
-        <div class="forge-shell">
-          <div class="hero-media">
-            <img
-              src="/assets/forge/autonomy.jpg"
-              alt="FORGE humanoid grasping a ball during a real-world manipulation task"
-              width="1427"
-              height="963"
-              fetchpriority="high"
-            />
-            <div class="hero-caption">
-              <p>From movement to interaction</p>
-              <h2>Whole-body control.<br />Contact awareness.</h2>
-              <a class="button" href="#video"
-                >▶ &nbsp; Watch the demonstration</a
-              >
-            </div>
-          </div>
-          <div class="hero-bottom">
-            <span>Real hardware. A unified task-space interface.</span
-            ><span>Navigation / Foot placement / Wrist pose / Contact</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="forge-section video-section" id="video">
-        <div class="forge-shell">
-          <div class="video-grid">
-            <div class="video-copy">
-              <p class="section-kicker">01 / See it in action</p>
-              <h2>One system.<br />Across the whole task.</h2>
-              <p>
-                From walking and precise positioning to contact-aware
-                manipulation and autonomous execution.
-              </p>
-              <a
-                class="text-link"
-                href="https://www.bilibili.com/video/BV1qkYa6zEx6/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Watch on Bilibili ↗</a
-              >
-            </div>
-            <div class="video-embed">
-              <iframe
-                src="https://player.bilibili.com/player.html?bvid=BV1qkYa6zEx6&amp;page=1&amp;autoplay=0&amp;danmaku=0"
-                title="FORGE system demonstration on Bilibili"
-                loading="lazy"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-          <div class="capabilities">
-            <figure>
-              <img
-                src="/assets/forge/locomotion.jpg"
-                width="1672"
-                height="901"
-                alt="Humanoid walking on uneven terrain"
-                loading="lazy"
-              />
-              <figcaption>
-                <span>01</span>
-                <div>
-                  <h3>Move with stability</h3>
-                  <p>
-                    A locomotion prior supports whole-body coordination over
-                    uneven terrain.
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/assets/forge/contact.jpg"
-                width="1672"
-                height="887"
-                alt="Real-world contact interaction with the humanoid's wrist"
-                loading="lazy"
-              />
-              <figcaption>
-                <span>02</span>
-                <div>
-                  <h3>Adapt to contact</h3>
-                  <p>
-                    Estimate wrist-equivalent loads and adapt targets without
-                    wrist F/T sensors.
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/assets/forge/teleoperation.jpg"
-                width="1710"
-                height="973"
-                alt="Bilateral manipulation of everyday objects"
-                loading="lazy"
-              />
-              <figcaption>
-                <span>03</span>
-                <div>
-                  <h3>Manipulate with purpose</h3>
-                  <p>
-                    A task-space interface for teleoperation and downstream
-                    autonomous policies.
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
+      </header>
 
       <section class="forge-section" id="overview">
         <div class="forge-shell">
-          <div class="overview-top">
-            <div>
-              <p class="section-kicker">02 / The idea</p>
-              <h2>
-                Coarse-to-fine commands.<br />Coordinated whole-body motion.
-              </h2>
-            </div>
-            <p class="abstract-copy">
-              Humanoid loco-manipulation requires coordinated locomotion,
-              balance regulation, and manipulation under frequent contacts.
-              FORGE introduces a coarse-to-fine command space spanning base
-              velocity, planar foot placement, wrist-pose tracking, and optional
-              desired wrist-load inputs. A frozen locomotion prior and
-              asymmetric residual actions stabilize whole-body corrections. For
-              sustained contact, a momentum observer is combined with a
-              simulator-supervised learned correction to estimate low-frequency,
-              wrist-equivalent interaction forces from proprioception and
-              reconstructed arm PD torques. A quasi-static virtual-target loop
-              uses this estimate to adapt wrist targets. The force pathway is
-              deliberately scoped to sensorless estimation and contact-load
-              adaptation—not full-wrench sensing, dynamic impedance, or
-              force-setpoint tracking.
-            </p>
-          </div>
-          <div class="contribution-strip" aria-label="FORGE contributions">
-            <div><strong>4</strong><span>command groups</span></div>
-            <div><strong>50 Hz</strong><span>whole-body policy</span></div>
-            <div><strong>0</strong><span>wrist F/T sensors</span></div>
-            <div>
-              <strong>80</strong><span>downstream hardware trials</span>
-            </div>
-          </div>
-          <details class="details-row">
-            <summary>View the complete system overview</summary>
-            <a
-              class="figure-link"
-              href="/assets/forge/teaser.png"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img
-                src="/assets/forge/teaser.png"
-                alt="Complete FORGE overview: locomotion, force-aware control, teleoperation, and autonomous policies"
-                loading="lazy"
-            /></a>
-          </details>
+          <h2>Overview</h2>
+          <p class="abstract-copy">
+            Humanoid loco-manipulation requires coordinated locomotion, balance
+            regulation, and manipulation under frequent contacts. FORGE
+            introduces a coarse-to-fine command space spanning base velocity,
+            planar foot placement, wrist-pose tracking, and optional desired
+            wrist-load inputs. A frozen locomotion prior and asymmetric residual
+            actions stabilize whole-body corrections. For sustained contact, a
+            momentum observer is combined with a simulator-supervised learned
+            correction to estimate low-frequency, wrist-equivalent interaction
+            forces from proprioception and reconstructed arm PD torques. A
+            quasi-static virtual-target loop uses this estimate to adapt wrist
+            targets. The force pathway is deliberately scoped to sensorless
+            estimation and contact-load adaptation—not full-wrench sensing,
+            dynamic impedance, or force-setpoint tracking.
+          </p>
         </div>
       </section>
 
@@ -248,8 +91,7 @@
         <div class="forge-shell">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">03 / How it works</p>
-              <h2>A physical prior.<br />A learned correction.</h2>
+              <h2>Method</h2>
             </div>
             <p>
               Multi-granularity commands, sensorless force estimation, and
@@ -276,7 +118,6 @@
 
           <div class="method-grid">
             <article class="method-card">
-              <span class="method-index">01</span>
               <h3>Multi-granularity commands</h3>
               <p>
                 Navigation, stance, bilateral wrist-pose, and force groups can
@@ -285,7 +126,6 @@
               </p>
             </article>
             <article class="method-card">
-              <span class="method-index">02</span>
               <h3>Physics-informed force estimation</h3>
               <p>
                 An arm-only momentum observer provides a physical prior. A
@@ -294,7 +134,6 @@
               </p>
             </article>
             <article class="method-card">
-              <span class="method-index">03</span>
               <h3>Asymmetric residual control</h3>
               <p>
                 A frozen lower-body locomotion expert anchors walking, while
@@ -306,8 +145,7 @@
 
           <div class="figure-panel actor-panel">
             <div class="figure-copy">
-              <p class="section-kicker">Policy architecture</p>
-              <h3>Grouped temporal observations, shared encoding</h3>
+              <h3>Actor architecture</h3>
               <p>
                 Six observable frames are organized by command granularity and
                 encoded through shared MLPs before temporal aggregation.
@@ -334,12 +172,35 @@
         </div>
       </section>
 
+      <section class="forge-section" id="video">
+        <div class="forge-shell">
+          <h2>Demonstration</h2>
+          <div class="video-embed">
+            <iframe
+              src="https://player.bilibili.com/player.html?bvid=BV1qkYa6zEx6&amp;page=1&amp;autoplay=0&amp;danmaku=0"
+              title="FORGE demonstration"
+              loading="lazy"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="figure-note">
+            <a
+              class="text-link"
+              href="https://www.bilibili.com/video/BV1qkYa6zEx6/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch on Bilibili ↗</a
+            >
+          </p>
+        </div>
+      </section>
+
       <section class="forge-section" id="results">
         <div class="forge-shell">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">04 / Experimental evidence</p>
-              <h2>From simulation<br />to physical interaction.</h2>
+              <h2>Experiments</h2>
             </div>
             <p>
               Controlled ablations explain the design. Independent force
@@ -350,10 +211,7 @@
           <div class="results-grid">
             <article class="result-story">
               <div class="result-copy">
-                <span class="result-tag">Unified control</span>
-                <h3>
-                  Residual learning and masking stabilize mixed objectives
-                </h3>
+                <h3>Control ablations</h3>
                 <p>
                   The locomotion prior prevents the collapse seen in end-to-end
                   29-DoF learning; residual-action exploration limits preserve
@@ -380,8 +238,7 @@
 
             <article class="result-story">
               <div class="result-copy">
-                <span class="result-tag">Force estimation</span>
-                <h3>Hybrid estimates track an independent force reference</h3>
+                <h3>Force estimation</h3>
                 <p>
                   On representative staged-load traces, the hybrid estimator
                   yields lower RMSE and MAE than observer-only and learned-only
@@ -408,8 +265,7 @@
 
             <article class="result-story">
               <div class="result-copy">
-                <span class="result-tag">Hardware execution</span>
-                <h3>Task tracking through transitions and perturbations</h3>
+                <h3>Hardware evaluation</h3>
                 <p>
                   Representative hardware traces span walking, squat-and-lift,
                   explicit foot positioning, wrist pushes, and base-drag
@@ -434,38 +290,6 @@
               </figure>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="forge-section autonomy" id="autonomy">
-        <div class="forge-shell">
-          <div class="autonomy-layout">
-            <img
-              class="autonomy-photo"
-              src="/assets/forge/autonomy.jpg"
-              width="1427"
-              height="963"
-              alt="Autonomous manipulation on the humanoid platform"
-              loading="lazy"
-            />
-            <div>
-              <p class="section-kicker">05 / Beyond teleoperation</p>
-              <h2>One Diffusion Policy.<br />Different payloads.</h2>
-              <p class="dp-intro">
-                Trained from 320 demonstrations and evaluated over 20 hardware
-                trials per payload.
-              </p>
-              <p class="payload-summary">
-                Success rates were 100% for empty and 0.5 kg payloads, and 90%
-                for 1 kg and 2 kg payloads.
-              </p>
-              <p class="scope-note">
-                This result validates the upstream-planner/downstream-controller
-                interface over the evaluated payload conditions.
-              </p>
-            </div>
-          </div>
-
           <div class="figure-panel bottle-panel">
             <a
               class="figure-link"
@@ -483,14 +307,24 @@
               resolution ↗
             </p>
           </div>
+
+          <div class="downstream-note" id="autonomy">
+            <h3>Downstream policy example</h3>
+            <p>
+              A Diffusion Policy trained on 320 demonstrations is used as a
+              downstream example of the task-space interface. Over 20 hardware
+              trials per payload, success rates were 100% for empty and 0.5 kg
+              payloads and 90% for 1 kg and 2 kg payloads. These results are
+              limited to the evaluated payload conditions.
+            </p>
+          </div>
         </div>
       </section>
 
       <section class="forge-section alt" id="bibtex">
         <div class="forge-shell citation-layout">
           <div>
-            <p class="section-kicker">06 / Resources</p>
-            <h2>Explore the research.</h2>
+            <h2>Resources</h2>
             <p style="margin-top: 20px">Manuscript under review.</p>
             <div class="forge-actions">
               <a
@@ -515,6 +349,19 @@
   journal = {Under Review},
   year    = {2026}
 }</code></pre>
+          <details class="details-row">
+            <summary>View the complete system overview</summary>
+            <a
+              class="figure-link"
+              href="/assets/forge/teaser.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="/assets/forge/teaser.png"
+                alt="Complete FORGE overview: locomotion, force-aware control, teleoperation, and autonomous policies"
+                loading="lazy"
+            /></a>
+          </details>
         </div>
       </section>
     </main>
