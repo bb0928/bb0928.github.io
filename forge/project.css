@@ -1,9 +1,9 @@
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   color: #252525;
   background: #fff;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.65;
 }
 * {
   box-sizing: border-box;
@@ -39,19 +39,20 @@ h2,
 h3 {
   color: #222;
   line-height: 1.35;
-  font-weight: 600;
+  font-weight: 700;
 }
 h1 {
-  font-size: 30px;
-  letter-spacing: -0.02em;
+  font-size: 32px;
+  letter-spacing: normal;
+  line-height: 1.22;
   max-width: 900px;
 }
 h2 {
-  font-size: 23px;
-  margin-bottom: 18px;
+  font-size: 26px;
+  margin-bottom: 16px;
 }
 h3 {
-  font-size: 17px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 p {
@@ -65,7 +66,7 @@ img {
 .forge-shell,
 .topbar-inner,
 .forge-footer {
-  width: min(960px, calc(100% - 64px));
+  width: min(920px, calc(100% - 64px));
   margin-inline: auto;
 }
 .topbar {
@@ -80,19 +81,26 @@ img {
 }
 .brand {
   color: #222;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
 }
 .nav {
   display: flex;
   gap: 24px;
-  font-size: 13px;
+  font-size: 15px;
 }
 .nav a {
   color: #555;
 }
 .paper-header {
-  padding: 40px 0 14px;
+  padding: 36px 0 22px;
+}
+.paper-teaser {
+  max-width: 760px;
+  margin: 8px auto 12px;
+}
+.paper-teaser .figure-note {
+  text-align: center;
 }
 .forge-actions {
   display: flex;
@@ -107,7 +115,7 @@ img {
   padding: 4px 16px;
   border: 1px solid #d8d8d8;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 16px;
   color: #333;
 }
 .button:hover {
@@ -121,7 +129,7 @@ img {
   padding-bottom: 12px;
 }
 .abstract-copy {
-  max-width: 900px;
+  max-width: 850px;
 }
 #method {
   padding-top: 30px;
@@ -140,8 +148,8 @@ img {
   cursor: zoom-in;
 }
 .figure-note {
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
   color: #666;
   margin-top: 12px;
 }
@@ -155,7 +163,7 @@ img {
   margin-top: 30px;
 }
 .method-card p {
-  font-size: 14px;
+  font-size: 17px;
 }
 .actor-panel {
   border-top: 1px solid #eee;
@@ -167,7 +175,7 @@ img {
   margin-bottom: 22px;
 }
 .figure-copy p {
-  font-size: 14px;
+  font-size: 17px;
 }
 .actor-panel figure {
   max-width: 780px;
@@ -195,7 +203,7 @@ img {
   padding: 20px 0;
 }
 .result-copy p {
-  font-size: 14px;
+  font-size: 17px;
   max-width: 820px;
 }
 .result-story figure {
@@ -213,7 +221,7 @@ img {
   margin-top: 28px;
 }
 .downstream-note p {
-  font-size: 14px;
+  font-size: 17px;
 }
 .citation-layout > div {
   margin-bottom: 22px;
@@ -245,7 +253,7 @@ img {
   gap: 20px;
   padding: 24px 0;
   border-top: 1px solid #eee;
-  font-size: 12px;
+  font-size: 14px;
 }
 .skip-link {
   position: fixed;
@@ -269,7 +277,7 @@ img {
   }
   .nav {
     gap: 14px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .nav a:last-child {
     display: none;
@@ -278,10 +286,10 @@ img {
     padding-top: 26px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 27px;
   }
   h2 {
-    font-size: 21px;
+    font-size: 24px;
   }
   .forge-section {
     padding: 24px 0;
@@ -294,7 +302,7 @@ img {
   .result-copy p,
   .figure-copy p,
   .downstream-note p {
-    font-size: 15px;
+    font-size: 17px;
   }
   .forge-footer {
     display: block;
