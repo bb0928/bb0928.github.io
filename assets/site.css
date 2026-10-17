@@ -303,6 +303,11 @@ h1 {
   object-fit: contain;
 }
 
+.experience-logo-stack {
+  flex-direction: column;
+  gap: 14px;
+}
+
 .experience-logo .experience-logo-seal {
   width: 84px;
   height: 84px;
@@ -470,6 +475,10 @@ footer {
   .experience-logo img {
     width: 76px;
     max-height: 76px;
+  }
+
+  .experience-logo-stack {
+    gap: 10px;
   }
 
   .experience-logo .experience-logo-seal {

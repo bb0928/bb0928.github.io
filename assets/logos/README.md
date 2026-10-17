@@ -9,3 +9,4 @@ Official assets used to identify Liangjun Xing’s education and internship affi
 | `robbyant.png` | https://gw.alipayobjects.com/render/p/yuyan/180020010001295322/zh-Hans/img/logo.png (served by https://docs.robbyant.com/zh-Hans/) |
 | `shanghai-ai-lab.png` | https://www.shlab.org.cn/static/asset/img/share-logo.png |
 | `unitree.svg` | https://www.unitree.com/images/0079f8938336436e955ea3a98c4e1e59.svg |
+| `ant-group.png` | https://gw.alipayobjects.com/mdn/rms_27e257/afts/img/A*TJgCS4M0nnsAAAAAAAAAAAAAARQnAQ (official header logo from https://www.antgroup.com/en) |
