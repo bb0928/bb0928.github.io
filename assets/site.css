@@ -260,6 +260,97 @@ h1 {
   margin-bottom: 4px;
 }
 
+#experiences {
+  scroll-margin-top: 76px;
+}
+
+.experience-group-title {
+  margin: 20px 0 10px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.experience-list {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+}
+
+.experience + .experience {
+  border-top: 1px solid var(--border);
+}
+
+.experience-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+}
+
+.experience-logo img {
+  display: block;
+  width: 116px;
+  max-height: 88px;
+  object-fit: contain;
+}
+
+.experience-logo .experience-logo-seal {
+  width: 84px;
+  height: 84px;
+}
+
+.experience-logo .experience-logo-tsinghua {
+  width: 116px;
+  height: 116px;
+  max-height: none;
+  object-fit: cover;
+}
+
+.experience-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 16px;
+}
+
+.experience-heading h4 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.experience p {
+  margin: 0;
+}
+
+.experience-date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.experience-role {
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.experience .experience-description {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .projects {
   display: grid;
   gap: 16px;
@@ -361,6 +452,40 @@ footer {
 }
 
 @media (max-width: 560px) {
+  #experiences {
+    scroll-margin-top: 110px;
+  }
+
+  .experience {
+    grid-template-columns: 76px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    padding: 18px 14px;
+  }
+
+  .experience-logo {
+    min-height: 76px;
+  }
+
+  .experience-logo img {
+    width: 76px;
+    max-height: 76px;
+  }
+
+  .experience-logo .experience-logo-seal {
+    width: 64px;
+    height: 64px;
+  }
+
+  .experience-logo .experience-logo-tsinghua {
+    width: 76px;
+    height: 76px;
+  }
+
+  .experience-heading {
+    flex-direction: column;
+  }
+
   .topbar-inner {
     padding: 8px 0;
     flex-direction: column;
