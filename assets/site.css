@@ -308,6 +308,16 @@ h1 {
   gap: 14px;
 }
 
+.experience-logo-stack .experience-logo-ant-group {
+  width: 100px;
+  max-width: 90%;
+  height: auto;
+  /* The official 256px asset has transparent padding after its 178px mark. */
+  aspect-ratio: 178 / 80;
+  object-fit: cover;
+  object-position: left;
+}
+
 .experience-logo .experience-logo-seal {
   width: 84px;
   height: 84px;
