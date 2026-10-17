@@ -23,51 +23,63 @@
     <meta property="og:url" content="https://bb0928.github.io/forge/" />
     <title>FORGE | Humanoid Loco-Manipulation</title>
     <link rel="canonical" href="https://bb0928.github.io/forge/" />
-    <link rel="stylesheet" href="/forge/project.css" />
+    <link rel="stylesheet" href="/forge/vendor/bulma.min.css" />
+    <link rel="stylesheet" href="/forge/vendor/academic-project.css" />
+    <link rel="stylesheet" href="/forge/project.css?v=20261017-template" />
+    <script defer src="/forge/project.js?v=20261017-template"></script>
   </head>
   <body class="forge-page">
     <a class="skip-link" href="#overview">Skip to content</a>
-    <header class="topbar">
-      <div class="topbar-inner">
-        <a class="brand" href="#">FORGE</a>
-        <nav class="nav" aria-label="Project navigation">
-          <a href="#method">Method</a>
-          <a href="#video">Video</a>
-          <a href="#results">Experiments</a>
-          <a href="#bibtex">BibTeX</a>
-        </nav>
-      </div>
-    </header>
 
     <main>
-      <header class="paper-header">
-        <div class="forge-shell">
-          <h1>
-            FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid
-            Loco-Manipulation
-          </h1>
-          <div class="forge-actions">
-            <a
-              class="button primary"
-              href="/forge/forge-paper.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Paper PDF</a
-            >
-            <a
-              class="button"
-              href="https://github.com/bb0928/FORGE"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Code</a
-            >
-            <a class="button" href="#video">Video</a>
+      <header class="hero publication-header">
+        <div class="hero-body">
+          <div class="forge-shell has-text-centered">
+            <h1 class="title is-1 publication-title">FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid <span style="white-space:nowrap">Loco-Manipulation</span></h1>
+            <div class="publication-authors">
+              <span class="author-block"><a href="/">Liangjun Xing</a><sup>1,2,*</sup>,</span>
+              <span class="author-block">Ke Fan<sup>1,4,*</sup>,</span>
+              <span class="author-block">Kailin Li<sup>1,*</sup>,</span>
+              <span class="author-block">Bin Wang<sup>1,3</sup>,</span>
+              <span class="author-block">Xiaojie Niu<sup>1</sup>,</span>
+              <span class="author-block">Qingwei Ben<sup>1,5</sup>,</span>
+              <span class="author-block">Jiafei Cao<sup>1</sup>,</span>
+              <span class="author-block">Wei Yao<sup>2</sup>,</span>
+              <span class="author-block">Yebin Liu<sup>2,†</sup>,</span>
+              <span class="author-block">Jingbo Wang<sup>1,†</sup>,</span>
+              <span class="author-block">Weinan Zhang<sup>1,†</sup></span>
+            </div>
+            <div class="publication-affiliations">
+              <span><sup>1</sup>Shanghai AI Laboratory</span>
+              <span><sup>2</sup>Tsinghua University</span>
+              <span><sup>3</sup>Zhejiang University</span>
+              <span><sup>4</sup>Shanghai Jiao Tong University</span>
+              <span><sup>5</sup>The Chinese University of Hong Kong</span>
+            </div>
+            <p class="contribution-note"><sup>*</sup>Equal contribution &nbsp; <sup>†</sup>Corresponding authors</p>
+            <div class="publication-links forge-actions">
+              <a class="button is-dark is-rounded" href="/forge/forge-paper.pdf" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></svg>
+                <span>Paper PDF</span>
+              </a>
+              <a class="button is-dark is-rounded" href="https://github.com/bb0928/FORGE" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5-7 7 7 7m8-14 7 7-7 7M14 3l-4 18"/></svg>
+                <span>Code</span>
+              </a>
+              <a class="button is-dark is-rounded" href="#video">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg>
+                <span>Video</span>
+              </a>
+            </div>
+            <nav class="section-nav" aria-label="Project navigation">
+              <a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Experiments</a><a href="#bibtex">BibTeX</a>
+            </nav>
           </div>
         </div>
       </header>
 
       <div class="forge-shell">
-        <figure class="paper-teaser">
+        <figure class="paper-teaser teaser">
           <a
             class="figure-link"
             href="/assets/forge/teaser_v12.png"
@@ -88,9 +100,9 @@
         </figure>
       </div>
 
-      <section class="forge-section" id="overview">
+      <section class="forge-section section hero is-light" id="overview">
         <div class="forge-shell">
-          <h2>Overview</h2>
+          <h2 class="title is-3">Overview</h2>
           <p class="abstract-copy">
             Humanoid loco-manipulation requires coordinated locomotion, balance
             regulation, and manipulation under frequent contacts. FORGE
@@ -109,11 +121,11 @@
         </div>
       </section>
 
-      <section class="forge-section alt" id="method">
+      <section class="forge-section section" id="method">
         <div class="forge-shell">
           <div class="section-heading">
             <div>
-              <h2>Method</h2>
+              <h2 class="title is-3">Method</h2>
             </div>
             <p>
               Multi-granularity commands, sensorless force estimation, and
@@ -194,9 +206,9 @@
         </div>
       </section>
 
-      <section class="forge-section" id="video">
+      <section class="forge-section section hero is-light" id="video">
         <div class="forge-shell">
-          <h2>Demonstration</h2>
+          <h2 class="title is-3">Demonstration</h2>
           <div class="video-embed">
             <iframe
               src="https://player.bilibili.com/player.html?bvid=BV1qkYa6zEx6&amp;page=1&amp;autoplay=0&amp;danmaku=0"
@@ -218,11 +230,11 @@
         </div>
       </section>
 
-      <section class="forge-section" id="results">
+      <section class="forge-section section" id="results">
         <div class="forge-shell">
           <div class="section-heading">
             <div>
-              <h2>Experiments</h2>
+              <h2 class="title is-3">Experiments</h2>
             </div>
             <p>
               Controlled ablations explain the design. Independent force
@@ -343,27 +355,27 @@
         </div>
       </section>
 
-      <section class="forge-section alt" id="bibtex">
+      <section class="forge-section section hero is-light" id="bibtex">
         <div class="forge-shell citation-layout">
           <div>
-            <h2>Resources</h2>
+            <h2 class="title is-3">Resources</h2>
             <p>Paper manuscript · 8 pages · PDF</p>
             <div class="forge-actions">
               <a
-                class="button primary"
+                class="button is-dark is-rounded"
                 href="/forge/forge-paper.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Open Paper PDF ↗</a
               >
               <a
-                class="button"
+                class="button is-dark is-rounded"
                 href="/forge/forge-paper.pdf"
                 download="FORGE-paper.pdf"
                 >Download PDF</a
               >
               <a
-                class="button"
+                class="button is-dark is-rounded"
                 href="https://github.com/bb0928/FORGE"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -371,18 +383,22 @@
               >
             </div>
           </div>
-          <pre class="bibtex"><code>@article{forge2026,
+          <div class="bibtex-heading"><h3>BibTeX</h3><button type="button" id="copy-bibtex" class="copy-bibtex-btn">Copy</button></div>
+          <p id="copy-status" class="copy-status" role="status"></p>
+          <pre class="bibtex"><code id="bibtex-code">@article{forge2026,
   title   = {FORGE: Force-Aware Multi-Granularity Control for
              Efficient Humanoid Loco-Manipulation},
-  author  = {Anonymous Authors},
-  journal = {Under Review},
-  year    = {2026}
+  author  = {Xing, Liangjun and Fan, Ke and Li, Kailin and Wang, Bin and
+             Niu, Xiaojie and Ben, Qingwei and Cao, Jiafei and Yao, Wei and
+             Liu, Yebin and Wang, Jingbo and Zhang, Weinan},
+  year    = {2026},
+  url     = {https://bb0928.github.io/forge/}
 }</code></pre>
         </div>
       </section>
     </main>
 
-    <footer class="forge-footer">
+    <footer class="footer forge-footer">
       <p>FORGE · Force-aware humanoid loco-manipulation</p>
       <p>
         <a href="/">Liangjun Xing</a> ·
@@ -393,6 +409,7 @@
           >GitHub</a
         >
       </p>
+      <p class="template-credit">Website adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> and <a href="https://nerfies.github.io/">Nerfies</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
     </footer>
   </body>
 </html>
