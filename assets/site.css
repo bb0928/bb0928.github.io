@@ -555,14 +555,25 @@ footer {
   text-align: center;
 }
 
-.profile-photo {
-  display: block;
+.profile-photo-frame {
+  position: relative;
   width: 190px;
   height: 190px;
   margin: 0 auto;
-  object-fit: cover;
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 6px;
+}
+
+.profile-photo {
+  /* Frame the full body: a 3100 px square at (1180, 1430) in the 4672 x 5209 source. */
+  position: absolute;
+  display: block;
+  width: 150.71%;
+  max-width: none;
+  height: auto;
+  left: -38.06%;
+  top: -46.13%;
 }
 
 .profile-sidebar h1 {
@@ -666,7 +677,7 @@ footer {
     text-align: left;
   }
 
-  .profile-photo {
+  .profile-photo-frame {
     width: 160px;
     height: 160px;
   }
@@ -692,7 +703,7 @@ footer {
     text-align: center;
   }
 
-  .profile-photo {
+  .profile-photo-frame {
     width: 130px;
     height: 130px;
   }
