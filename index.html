@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liangjun Xing | Academic Homepage</title>
-  <link rel="stylesheet" href="/assets/site.css?v=a16afc9c6d07" />
+  <link rel="stylesheet" href="/assets/site.css?v=1ce2ab3c8868" />
 </head>
-<body>
+<body class="homepage">
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="/">Liangjun Xing</a>
@@ -20,32 +20,23 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero" id="about">
-      <div class="hero-grid">
-        <div>
-          <span class="eyebrow">Master Student · Tsinghua University</span>
-          <h1>Liangjun Xing</h1>
-          <p class="lead">
-            Graduate at 2027 | Embodied AI | Seeking job/PhD opportunities
-          </p>
-          <div class="button-row">
-            <a class="button primary" href="https://github.com/bb0928" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="button" href="#" target="_blank" rel="noopener noreferrer">CV</a>
-            <a class="button" href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a class="button" href="#misc">Contact</a>
-          </div>
-        </div>
-
-        <div class="hero-side">
-          <aside class="hero-card profile-card">
-            <img src="/assets/profile.jpg" alt="Profile photo" />
-            <div class="profile-caption"></div>
-          </aside>
+  <main class="container home-layout" id="about">
+    <aside class="profile-sidebar" aria-labelledby="profile-name">
+      <img class="profile-photo" src="/assets/profile.jpg" alt="Liangjun Xing's profile picture" width="190" height="190" />
+      <div class="profile-info">
+        <h1 id="profile-name">Liangjun Xing</h1>
+        <p class="profile-affiliation">Master's Student<br>Tsinghua University</p>
+        <p class="profile-summary">Graduating in 2027 · Embodied AI<br>Seeking job/PhD opportunities</p>
+        <div class="button-row">
+          <a class="button primary" href="https://github.com/bb0928" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button" href="#" target="_blank" rel="noopener noreferrer">CV</a>
+          <a class="button" href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a class="button" href="#misc">Contact</a>
         </div>
       </div>
-    </section>
+    </aside>
 
+    <div class="home-content">
     <section class="section" id="intro">
       <div class="section-header">
         <h2>Intro</h2>
@@ -129,7 +120,7 @@
               <span class="entry-meta">ICRA 2026</span>
             </div>
             <div class="entry-figure">
-              <img src="/assets/gaf-fig1.png" alt="GAF figure 1" />
+              <img src="/assets/gaf-fig1.png" alt="GAF figure 1" width="971" height="398" loading="lazy" />
             </div>
             <p>
               Proposed a V-4D-A framework with Gaussian Action Field for direct action inference, showing bi-manual dexterous manipulation capability in RLBench tasks and real-world deployment. Achieved +11.54 dB PSNR improvement and boosted robotic task success rate by 10.33% over SOTA methods.
@@ -147,7 +138,7 @@
               <span class="entry-meta">Preprint</span>
             </div>
             <div class="entry-figure">
-              <img src="/assets/synagent-fig1.png" alt="SynAgent figure 1" />
+              <img src="/assets/synagent-fig1.png" alt="SynAgent figure 1" width="793" height="279" loading="lazy" />
             </div>
             <p>
               A framework for generalizable cooperative humanoid manipulation, enabling synergy from solo-agent training to cooperative multi-agent deployment for complex manipulation tasks.
@@ -165,7 +156,7 @@
               <span class="entry-meta">Master's Research Project</span>
             </div>
             <div class="entry-figure">
-              <img src="/assets/motiontracking.jpg" alt="Motion Tracking" />
+              <img src="/assets/motiontracking.jpg" alt="Motion Tracking" width="1536" height="1024" loading="lazy" />
             </div>
             <p>
               Optimized the retargeting pipeline from MoCap data to dexterous-hand interactions, designed RL reward functions for articulated object manipulation, addressed task expansion via policy distillation, and adapted motion generation to various dexterous hands.
@@ -276,10 +267,12 @@
         </div>
       </div>
     </section>
+    </div>
   </main>
 
   <footer>
     &copy; 2026 Liangjun Xing
   </footer>
+  <script src="/assets/home-layout.js?v=d5ccccea8075" defer></script>
 </body>
 </html>
