@@ -532,7 +532,29 @@ footer {
 
 /* Personal homepage: persistent profile and independently packed projects. */
 .homepage {
+  --primary: #2f6663;
+  --primary-soft: #edf4f3;
+  --primary-hover: #234d4a;
+  --body-text: #454545;
   --max-width: 1280px;
+}
+
+.homepage .card p,
+.homepage .card li,
+.homepage .entry p,
+.homepage .entry li,
+.homepage .experience-description {
+  color: var(--body-text);
+}
+
+.homepage .button:not(.primary) {
+  color: var(--primary);
+}
+
+.homepage .button.primary:hover,
+.homepage .button.primary:focus-visible {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
 }
 
 .homepage .topbar {
