@@ -566,13 +566,13 @@ footer {
 }
 
 .profile-photo {
-  /* Frame the full body: a 3100 px square at (1180, 1430) in the 4672 x 5209 source. */
+  /* Frame the full body: a 3100 px square at (1050, 1430) in the 4672 x 5209 source. */
   position: absolute;
   display: block;
   width: 150.71%;
   max-width: none;
   height: auto;
-  left: -38.06%;
+  left: -33.87%;
   top: -46.13%;
 }
 
