@@ -531,12 +531,28 @@ footer {
 }
 
 /* Personal homepage: persistent profile and independently packed projects. */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/assets/fonts/source-serif-4-latin.woff2") format("woff2");
+}
+
 .homepage {
   --primary: #2f6663;
   --primary-soft: #edf4f3;
   --primary-hover: #234d4a;
   --body-text: #454545;
   --max-width: 1280px;
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+.homepage h1,
+.homepage h2,
+.homepage h3,
+.homepage h4 {
+  font-weight: 600;
 }
 
 .homepage .card p,
@@ -600,7 +616,7 @@ footer {
 
 .profile-sidebar h1 {
   margin: 18px 0 10px;
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 1.15;
 }
 
