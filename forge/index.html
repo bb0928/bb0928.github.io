@@ -1,415 +1,242 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="FORGE is a force-aware multi-granularity control framework for stable, precise, and contact-aware humanoid loco-manipulation."
-    />
-    <meta
-      property="og:title"
-      content="FORGE — Force-Aware Humanoid Loco-Manipulation"
-    />
-    <meta
-      property="og:description"
-      content="One task-space interface for navigation, footholds, wrist poses, and force-conditioned contact adaptation."
-    />
-    <meta
-      property="og:image"
-      content="https://bb0928.github.io/assets/forge/teaser_v12.png"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bb0928.github.io/forge/" />
-    <title>FORGE | Humanoid Loco-Manipulation</title>
-    <link rel="canonical" href="https://bb0928.github.io/forge/" />
-    <link rel="stylesheet" href="/forge/vendor/bulma.min.css" />
-    <link rel="stylesheet" href="/forge/vendor/academic-project.css" />
-    <link rel="stylesheet" href="/forge/project.css?v=20261017-template" />
-    <script defer src="/forge/project.js?v=20261017-template"></script>
-  </head>
-  <body class="forge-page">
-    <a class="skip-link" href="#overview">Skip to content</a>
-
-    <main>
-      <header class="hero publication-header">
-        <div class="hero-body">
-          <div class="forge-shell has-text-centered">
-            <h1 class="title is-1 publication-title">FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid <span style="white-space:nowrap">Loco-Manipulation</span></h1>
-            <div class="publication-authors">
-              <span class="author-block"><a href="/">Liangjun Xing</a><sup>1,2,*</sup>,</span>
-              <span class="author-block">Ke Fan<sup>1,4,*</sup>,</span>
-              <span class="author-block">Kailin Li<sup>1,*</sup>,</span>
-              <span class="author-block">Bin Wang<sup>1,3</sup>,</span>
-              <span class="author-block">Xiaojie Niu<sup>1</sup>,</span>
-              <span class="author-block">Qingwei Ben<sup>1,5</sup>,</span>
-              <span class="author-block">Jiafei Cao<sup>1</sup>,</span>
-              <span class="author-block">Wei Yao<sup>2</sup>,</span>
-              <span class="author-block">Yebin Liu<sup>2,†</sup>,</span>
-              <span class="author-block">Jingbo Wang<sup>1,†</sup>,</span>
-              <span class="author-block">Weinan Zhang<sup>1,†</sup></span>
-            </div>
-            <div class="publication-affiliations">
-              <span><sup>1</sup>Shanghai AI Laboratory</span>
-              <span><sup>2</sup>Tsinghua University</span>
-              <span><sup>3</sup>Zhejiang University</span>
-              <span><sup>4</sup>Shanghai Jiao Tong University</span>
-              <span><sup>5</sup>The Chinese University of Hong Kong</span>
-            </div>
-            <p class="contribution-note"><sup>*</sup>Equal contribution &nbsp; <sup>†</sup>Corresponding authors</p>
-            <div class="publication-links forge-actions">
-              <a class="button is-dark is-rounded" href="/forge/forge-paper.pdf" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></svg>
-                <span>Paper PDF</span>
-              </a>
-              <a class="button is-dark is-rounded" href="https://github.com/bb0928/FORGE" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5-7 7 7 7m8-14 7 7-7 7M14 3l-4 18"/></svg>
-                <span>Code</span>
-              </a>
-              <a class="button is-dark is-rounded" href="#video">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg>
-                <span>Video</span>
-              </a>
-            </div>
-            <nav class="section-nav" aria-label="Project navigation">
-              <a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Experiments</a><a href="#bibtex">BibTeX</a>
-            </nav>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FORGE unifies navigation, foot placement, wrist tracking, and force-conditioned contact adaptation for humanoid loco-manipulation.">
+  <meta property="og:title" content="FORGE — Force-aware humanoid loco-manipulation">
+  <meta property="og:description" content="From sparse task-space commands to coordinated whole-body interaction.">
+  <meta property="og:image" content="https://bb0928.github.io/assets/forge/20261103/teaser.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bb0928.github.io/forge/">
+  <meta name="theme-color" content="#f4f8ff">
+  <link rel="canonical" href="https://bb0928.github.io/forge/">
+  <link rel="stylesheet" href="/forge/project.css?v=20261103">
+  <script defer src="/forge/project.js?v=20261103"></script>
+  <title>FORGE — Force-Aware Humanoid Loco-Manipulation</title>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to research</a>
+  <header class="topbar">
+    <a class="wordmark" href="/forge/" aria-label="FORGE project home">F<span class="brand-cut">/</span>ORGE</a>
+    <nav aria-label="Primary navigation">
+      <a href="#overview">Research</a>
+      <a href="#demonstration">Demonstration</a>
+      <a href="forge-paper.pdf?v=20261103" target="_blank" rel="noopener">Paper ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">HUMANOID LOCO-MANIPULATION</p>
+        <h1 id="hero-title">Move with stability.<br>Reach with precision.<br>Adapt to contact.</h1>
+        <p class="hero-summary">One whole-body controller.<br>From coarse navigation to fine interaction.</p>
+        <div class="resource-links">
+          <a href="forge-paper.pdf?v=20261103" target="_blank" rel="noopener">↗ Paper</a>
+          <a href="https://github.com/bb0928/FORGE" target="_blank" rel="noopener">↗ GitHub</a>
+          <a href="#demonstration">▷ Video</a>
         </div>
-      </header>
-
-      <div class="forge-shell">
-        <figure class="paper-teaser teaser">
-          <a
-            class="figure-link"
-            href="/assets/forge/teaser_v12.png"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/assets/forge/teaser_v12.png"
-              alt="FORGE system overview: loco-manipulation, task-space tracking, contact adaptation, and force estimation"
-              width="1600"
-              height="982"
-              fetchpriority="high"
-            />
-          </a>
-          <figcaption class="figure-note">
-            FORGE system overview. Select the figure to view at full resolution.
-          </figcaption>
-        </figure>
       </div>
-
-      <section class="forge-section section hero is-light" id="overview">
-        <div class="forge-shell">
-          <h2 class="title is-3">Overview</h2>
-          <p class="abstract-copy">
-            Humanoid loco-manipulation requires coordinated locomotion, balance
-            regulation, and manipulation under frequent contacts. FORGE
-            introduces a coarse-to-fine command space spanning base velocity,
-            planar foot placement, wrist-pose tracking, and optional desired
-            wrist-load inputs. A frozen locomotion prior and asymmetric residual
-            actions stabilize whole-body corrections. For sustained contact, a
-            momentum observer is combined with a simulator-supervised learned
-            correction to estimate low-frequency, wrist-equivalent interaction
-            forces from proprioception and reconstructed arm PD torques. A
-            quasi-static virtual-target loop uses this estimate to adapt wrist
-            targets. The force pathway is deliberately scoped to sensorless
-            estimation and contact-load adaptation—not full-wrench sensing,
-            dynamic impedance, or force-setpoint tracking.
-          </p>
-        </div>
-      </section>
-
-      <section class="forge-section section" id="method">
-        <div class="forge-shell">
-          <div class="section-heading">
+      <figure class="hero-media">
+        <a href="/assets/forge/20261103/teaser.png" target="_blank" rel="noopener">
+          <img src="/assets/forge/20261103/teaser.png" alt="FORGE on hardware: carrying a box, erasing a whiteboard, peeling a cucumber, and placing bottles." width="1371" height="840" fetchpriority="high">
+        </a>
+        <figcaption>Locomotion, task-space tracking, and contact interaction on the same platform.</figcaption>
+      </figure>
+      <a class="scroll-link" href="#overview">Explore the research <span>↓</span></a>
+    </section>
+    <div class="research-heading">
+      <p class="eyebrow">FORGE / RESEARCH</p>
+      <h2>Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation</h2>
+      <p class="authors">Liangjun Xing<sup>1,2,*</sup>, Ke Fan<sup>1,4,*</sup>, Kailin Li<sup>1,*</sup>, Bin Wang<sup>1,3</sup>, Xiaojie Niu<sup>1</sup>, Qingwei Ben<sup>1,5</sup>, Jiafei Cao<sup>1</sup>, Wei Yao<sup>2</sup>, Yebin Liu<sup>2,†</sup>, Jingbo Wang<sup>1,†</sup>, Weinan Zhang<sup>1,†</sup></p>
+      <p class="affiliations"><sup>1</sup>Shanghai AI Laboratory · <sup>2</sup>Tsinghua University · <sup>3</sup>Zhejiang University · <sup>4</sup>Shanghai Jiao Tong University · <sup>5</sup>The Chinese University of Hong Kong</p>
+      <p class="affiliations">* Equal contribution &nbsp; † Corresponding authors</p>
+      <div class="article-meta"><span>Manuscript · 8 pages</span><span>Page updated November 3, 2026</span><a href="#citation">Cite this work ↙</a></div>
+    </div>
+    <div class="research-layout">
+      <aside class="contents">
+        <p class="eyebrow">ON THIS PAGE</p>
+        <nav aria-label="Article sections">
+          <a href="#overview"><span>01</span> Overview</a>
+          <a href="#demonstration"><span>02</span> On the robot</a>
+          <a href="#controller"><span>03</span> Controller design</a>
+          <a href="#comparison"><span>04</span> Controller comparison</a>
+          <a href="#stability"><span>05</span> Unified-control stability</a>
+          <a href="#contact"><span>06</span> Contact &amp; force</a>
+          <a href="#hardware"><span>07</span> Hardware recovery</a>
+          <a href="#downstream"><span>08</span> Downstream learning</a>
+          <a href="#citation"><span>09</span> Resources</a>
+        </nav>
+      </aside>
+      <article class="article">
+        <section id="overview">
+          <p class="section-number">/ 01</p>
+          <h2>One interface, from approach to contact.</h2>
+          <p class="lead">A humanoid must do more than reach a target. It must approach it, place its feet, coordinate its arms, and stay balanced when contact changes.</p>
+          <p>FORGE exposes these demands through a coarse-to-fine command interface: base velocity, planar foot placement, bilateral wrist poses, and optional desired wrist loads. Command groups can be used separately or together, without switching to a different whole-body controller.</p>
+          <p>Policy training requires no full-body human motion trajectories or joint-angle references. Teleoperation supplies sparse wrist poses relative to the pelvis and coarse motion commands. A frozen locomotion prior supports stability; a sensorless force-estimation pathway adapts wrist targets during sustained contact.</p>
+          <div class="principles">
+            <div><span>01 / STABILITY</span><p>Preserve the locomotion prior while learning whole-body corrections.</p></div>
+            <div><span>02 / PRECISION</span><p>Expose task-space targets for both stance and wrist motion.</p></div>
+            <div><span>03 / CONTACT</span><p>Use estimated interaction forces to adapt position targets.</p></div>
+          </div>
+        </section>
+        <section id="demonstration">
+          <p class="section-number">/ 02</p>
+          <h2>On the robot.</h2>
+          <p>Hardware demonstrations span locomotion while carrying, whiteboard erasing, cucumber peeling, and sequential bottle placement. The video provides qualitative examples; the controlled evaluations are reported separately below.</p>
+          <div class="video-shell">
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1qkYa6zEx6&amp;page=1&amp;autoplay=0&amp;danmaku=0" title="FORGE hardware demonstration" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="caption">FORGE hardware demonstration. <a href="https://www.bilibili.com/video/BV1qkYa6zEx6/" target="_blank" rel="noopener">Watch on Bilibili ↗</a></p>
+        </section>
+        <section id="controller">
+          <p class="section-number">/ 03</p>
+          <h2>Sparse commands.<br>Coordinated whole-body control.</h2>
+          <p>The controller combines three components: multi-granularity command masking, physics-informed force estimation with virtual-target adaptation, and asymmetric residual actions anchored on a frozen locomotion expert.</p>
+          <figure>
+            <a href="/assets/forge/20261103/pipeline.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/pipeline.png" alt="FORGE pipeline from sparse operator commands through observation masking, hybrid force estimation, and base-plus-residual whole-body control." loading="lazy"></a>
+            <figcaption>System overview. Simulator contact-force labels supervise the learned correction during training; they are not deployment inputs. Paper Fig. 2.</figcaption>
+          </figure>
+          <h3>Activate only the objectives that matter.</h3>
+          <p>Four task-level activation bits select Navigation, Stance, Pose, and Force. Inactive command entries are replaced with null values and their reward terms are excluded. This prevents inactive targets from competing with the current task while preserving the same 29-dimensional action semantics.</p>
+          <h3>Keep the prior. Learn the correction.</h3>
+          <p>A pretrained lower-body locomotion expert is frozen. The residual policy learns corrective lower-body actions and directly controls the upper body, allowing manipulation-induced posture changes without relearning walking from scratch.</p>
+          <div class="split">
             <div>
-              <h2 class="title is-3">Method</h2>
-            </div>
-            <p>
-              Multi-granularity commands, sensorless force estimation, and
-              asymmetric residual control work together through a single
-              task-space interface.
-            </p>
-          </div>
-          <div class="figure-panel wide-figure">
-            <a
-              class="figure-link"
-              href="/assets/forge/pipeline.png"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img
-                src="/assets/forge/pipeline.png"
-                alt="FORGE pipeline from multi-granularity commands through force estimation and whole-body control"
-                loading="lazy"
-            /></a>
-            <p class="figure-note">
-              System architecture. Select the figure to view at full resolution
-              ↗
-            </p>
-          </div>
-
-          <div class="method-grid">
-            <article class="method-card">
-              <h3>Multi-granularity commands</h3>
-              <p>
-                Navigation, stance, bilateral wrist-pose, and force groups can
-                be activated individually or jointly. Observation and reward
-                masking reduces interference between inactive objectives.
-              </p>
-            </article>
-            <article class="method-card">
-              <h3>Physics-informed force estimation</h3>
-              <p>
-                An arm-only momentum observer provides a physical prior. A
-                compact learned correction absorbs actuator mismatch and
-                unmodeled whole-body coupling using only deployable signals.
-              </p>
-            </article>
-            <article class="method-card">
-              <h3>Asymmetric residual control</h3>
-              <p>
-                A frozen lower-body locomotion expert anchors walking, while
-                learned lower-body residuals and direct upper-body actions
-                preserve task-dependent whole-body coordination.
-              </p>
-            </article>
-          </div>
-
-          <div class="figure-panel actor-panel">
-            <div class="figure-copy">
-              <h3>Actor architecture</h3>
-              <p>
-                Six observable frames are organized by command granularity and
-                encoded through shared MLPs before temporal aggregation.
-                Training-only privileged signals supervise adaptation;
-                deployment uses observable proprioception and command histories.
-              </p>
+              <h3>Observable history at deployment.</h3>
+              <p>Six masked observation frames feed a shared MLP and a two-layer Transformer. An adaptation encoder supplies a second latent to the action head. Its decoder predicts a six-dimensional force correction at deployment; wrist-position and base-velocity targets provide auxiliary training supervision.</p>
+              <p>The policy runs at 50 Hz. Low-level joint targets are produced from the policy action rather than from full-body human motion references.</p>
             </div>
             <figure>
-              <a
-                class="figure-link"
-                href="/assets/forge/actor-architecture.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  src="/assets/forge/actor-architecture.png"
-                  alt="FORGE actor architecture with grouped observation histories and shared MLP encoders"
-                  loading="lazy"
-              /></a>
-              <figcaption class="figure-note">
-                Actor architecture · Open full resolution ↗
-              </figcaption>
+              <a href="/assets/forge/20261103/actor.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/actor.png" alt="Six-frame observable-history actor with Transformer, adaptation encoder, and action head." loading="lazy"></a>
+              <figcaption>Actor architecture. Dashed privileged quantities are training targets only. Paper Fig. 3.</figcaption>
             </figure>
           </div>
-        </div>
-      </section>
-
-      <section class="forge-section section hero is-light" id="video">
-        <div class="forge-shell">
-          <h2 class="title is-3">Demonstration</h2>
-          <div class="video-embed">
-            <iframe
-              src="https://player.bilibili.com/player.html?bvid=BV1qkYa6zEx6&amp;page=1&amp;autoplay=0&amp;danmaku=0"
-              title="FORGE demonstration"
-              loading="lazy"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+          <details><summary>Training and implementation details</summary>
+            <p>Training uses 2,048 parallel environments, 50 simulation steps per PPO update, and up to 20,000 updates per stage. Isaac Gym runs at 200 Hz with four-step decimation. PPO uses Adam with an initial learning rate of 10<sup>−3</sup> and an adaptive schedule targeting KL 0.01. Lower-body residual action standard deviation is clipped at 0.2. See Sec. IV-A of the paper for the full randomization, gains, and optimizer settings.</p>
+          </details>
+        </section>
+        <section id="comparison">
+          <p class="section-number">/ 04</p>
+          <h2>Comparison on a shared platform.</h2>
+          <p>The paper compares four humanoid controllers on the same robot and target sequences. Hardware latency and tracking use 20 trials per method. A separate simulation test measures squeezing force during sustained bilateral contact with a rigid box.</p>
+          <div class="table-scroll" role="region" aria-label="Controller comparison" tabindex="0">
+            <table>
+              <caption>Controller comparison · Paper Table I</caption>
+              <thead><tr><th scope="col">Controller</th><th scope="col">Latency ↓<small>ms · hardware</small></th><th scope="col">Foot MPE ↓<small>cm · hardware</small></th><th scope="col">Wrist MPE ↓<small>cm · hardware</small></th><th scope="col">Contact force ↓<small>N · simulation</small></th></tr></thead>
+              <tbody>
+                <tr><th scope="row">HOMIE</th><td>27</td><td>N/A</td><td>N/A</td><td>15.48</td></tr>
+                <tr><th scope="row">TWIST2</th><td>197</td><td>7.87</td><td>7.76</td><td>17.16</td></tr>
+                <tr><th scope="row">SONIC</th><td>252</td><td>7.35</td><td>6.42</td><td>15.32</td></tr>
+                <tr class="ours"><th scope="row">FORGE</th><td>22</td><td>5.42</td><td>4.15</td><td>8.52</td></tr>
+              </tbody>
+            </table>
           </div>
-          <p class="figure-note">
-            <a
-              class="text-link"
-              href="https://www.bilibili.com/video/BV1qkYa6zEx6/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Watch on Bilibili ↗</a
-            >
-          </p>
-        </div>
-      </section>
-
-      <section class="forge-section section" id="results">
-        <div class="forge-shell">
-          <div class="section-heading">
-            <div>
-              <h2 class="title is-3">Experiments</h2>
-            </div>
-            <p>
-              Controlled ablations explain the design. Independent force
-              references and hardware task sequences test its behavior.
-            </p>
+          <p class="caption">Latency is command transmission to end-effector arrival, not neural-network inference time. MPE is mean position error; HOMIE has no corresponding wrist-target or foothold interface. Contact force is the bilateral mean absolute normal reaction under identical wrist-position targets. Lower force means less squeezing in this test, not more accurate force tracking.</p>
+        </section>
+        <section id="stability">
+          <p class="section-number">/ 05</p>
+          <h2>What keeps unified control stable?</h2>
+          <p>The ablations isolate the locomotion prior, lower-body exploration clipping, and command masking. End-to-end 29-DoF learning without the prior fails to learn stable behavior in this setting; removing action-std clipping produces late reward collapse. Masking smooths the transition from walking to stance.</p>
+          <figure>
+            <a href="/assets/forge/20261103/control-ablation.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/control-ablation.png" alt="Three ablations: residual-policy convergence, action-standard-deviation clipping, and masking at walk-to-stance transitions." loading="lazy"></a>
+            <figcaption>Unified-control ablations. Paper Fig. 6.</figcaption>
+          </figure>
+          <div class="table-scroll" role="region" aria-label="Masking ablation" tabindex="0">
+            <table>
+              <caption>Masking ablation · Paper Table III</caption>
+              <thead><tr><th scope="col">Metric</th><th scope="col">Without mask</th><th scope="col">FORGE</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Valid rollout (s) ↑</th><td>15.69 ± 1.32</td><td>19.46 ± 0.52</td></tr>
+                <tr><th scope="row">Linear velocity error (m/s) ↓</th><td>0.194 ± 0.003</td><td>0.162 ± 0.003</td></tr>
+                <tr><th scope="row">Planar feet MPE (m) ↓</th><td>0.182 ± 0.002</td><td>0.167 ± 0.002</td></tr>
+                <tr><th scope="row">Wrist MPE (m) ↓</th><td>0.115 ± 0.003</td><td>0.079 ± 0.004</td></tr>
+              </tbody>
+            </table>
           </div>
-
-          <div class="results-grid">
-            <article class="result-story">
-              <div class="result-copy">
-                <h3>Control ablations</h3>
-                <p>
-                  The locomotion prior prevents the collapse seen in end-to-end
-                  29-DoF learning; residual-action exploration limits preserve
-                  the prior, and masking reduces walk-to-stance discontinuities.
-                </p>
-              </div>
-              <figure>
-                <a
-                  class="figure-link"
-                  href="/assets/forge/unified-control-ablation.png"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img
-                    src="/assets/forge/unified-control-ablation.png"
-                    alt="Training and mode-switching ablations for residual control, action standard deviation, and masking"
-                    loading="lazy"
-                /></a>
-                <figcaption class="figure-note">
-                  Residual control, exploration limits, and masking ablations.
-                  Open full resolution ↗
-                </figcaption>
-              </figure>
-            </article>
-
-            <article class="result-story">
-              <div class="result-copy">
-                <h3>Force estimation</h3>
-                <p>
-                  On representative staged-load traces, the hybrid estimator
-                  yields lower RMSE and MAE than observer-only and learned-only
-                  variants.
-                </p>
-              </div>
-              <figure>
-                <a
-                  class="figure-link"
-                  href="/assets/forge/force-estimation-xyz.png"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img
-                    src="/assets/forge/force-estimation-xyz.png"
-                    alt="Hybrid, observer-only, and learned-only wrist-equivalent force estimates on three axes"
-                    loading="lazy"
-                /></a>
-                <figcaption class="figure-note">
-                  Three-axis force estimates against an independent reference.
-                  Open full resolution ↗
-                </figcaption>
-              </figure>
-            </article>
-
-            <article class="result-story">
-              <div class="result-copy">
-                <h3>Hardware evaluation</h3>
-                <p>
-                  Representative hardware traces span walking, squat-and-lift,
-                  explicit foot positioning, wrist pushes, and base-drag
-                  perturbations.
-                </p>
-              </div>
-              <figure>
-                <a
-                  class="figure-link"
-                  href="/assets/forge/hardware-recovery.png"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img
-                    src="/assets/forge/hardware-recovery.png"
-                    alt="Pelvis acceleration and wrist tracking error during walking, lifting, foot positioning, pushing, and dragging"
-                    loading="lazy"
-                /></a>
-                <figcaption class="figure-note">
-                  A representative long hardware sequence. Open full resolution
-                  ↗
-                </figcaption>
-              </figure>
-            </article>
+          <p class="caption">Mean ± standard deviation across 20 rollouts per variant; each rollout is capped at 20 seconds.</p>
+          <div class="split">
+            <div><h3>Balancing precision and stability.</h3><p>A termination-threshold sweep evaluates 0.1, 0.2, 0.3, and 0.4 m. The selected 0.2 m setting concentrates tracking errors at low values, whereas 0.3 and 0.4 m produce broader distributions with longer high-error tails.</p></div>
+            <figure><a href="/assets/forge/20261103/threshold-sweep.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/threshold-sweep.png" alt="Tracking-error distributions for four termination thresholds." loading="lazy"></a><figcaption>Precision–stability sweep. Paper Fig. 7.</figcaption></figure>
           </div>
-          <div class="figure-panel bottle-panel">
-            <a
-              class="figure-link"
-              href="/assets/forge/bottle-sequence.png"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img
-                src="/assets/forge/bottle-sequence.png"
-                alt="Sequential real-world bottle placement with wrist-equivalent force traces"
-                loading="lazy"
-            /></a>
-            <p class="figure-note">
-              Sequential bottle placement on hardware. Force traces act as
-              qualitative contact-event indicators at release. Open full
-              resolution ↗
-            </p>
+        </section>
+        <section id="contact">
+          <p class="section-number">/ 06</p>
+          <h2>Estimate contact.<br>Adapt the target.</h2>
+          <p>A momentum observer provides a structured arm-disturbance estimate. A learned correction compensates for residual model and actuation errors. Together, they estimate low-frequency, wrist-equivalent translational interaction forces from arm joint states and reconstructed PD torques—without wrist force/torque sensors.</p>
+          <p>The estimated environmental reaction and optional desired applied-force command define a quasi-static force-balance error. A virtual-target update converts this error into a wrist-position offset, which the same whole-body policy tracks.</p>
+          <figure>
+            <a href="/assets/forge/20261103/force-estimation.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/force-estimation.png" alt="Hybrid, observer-only, and learned-only force estimates against synchronized gauge references across three axes." loading="lazy"></a>
+            <figcaption>Representative staged-load traces on hardware. Each load condition is repeated ten times with digitally synchronized force-gauge references. Paper Fig. 8.</figcaption>
+          </figure>
+          <div class="table-scroll" role="region" aria-label="Force estimation errors" tabindex="0">
+            <table>
+              <caption>Force-estimation errors · Paper Table IV</caption>
+              <thead><tr><th scope="col">Estimator</th><th scope="col">x axis</th><th scope="col">y axis</th><th scope="col">z axis</th></tr></thead>
+              <tbody>
+                <tr class="ours"><th scope="row">Hybrid (FORGE)</th><td>0.81 / 0.50</td><td>1.97 / 1.57</td><td>0.87 / 0.67</td></tr>
+                <tr><th scope="row">Observer-only</th><td>2.83 / 2.29</td><td>5.15 / 4.43</td><td>3.02 / 2.58</td></tr>
+                <tr><th scope="row">Learned-only</th><td>2.43 / 2.19</td><td>2.23 / 1.92</td><td>2.88 / 2.47</td></tr>
+              </tbody>
+            </table>
           </div>
-
-          <div class="downstream-note" id="autonomy">
-            <h3>Downstream policy example</h3>
-            <p>
-              A Diffusion Policy trained on 320 demonstrations is used as a
-              downstream example of the task-space interface. Over 20 hardware
-              trials per payload, success rates were 100% for empty and 0.5 kg
-              payloads and 90% for 1 kg and 2 kg payloads. These results are
-              limited to the evaluated payload conditions.
-            </p>
+          <p class="caption">Entries are RMSE / MAE in newtons for the representative traces above, not aggregate errors across all trials. Held-out vertical loads of 35, 40, and 50 N yield hybrid RMSEs of 8.28, 9.66, and 12.35 N.</p>
+          <h3>Less deformation during sustained contact.</h3>
+          <p>In the foam-box lifting comparison, the robot, policy weights, initial pose, nominal wrist trajectory, and lift target are held fixed. Both variants complete the lift, but enabling force feedback produces less visible deformation than tracking nominal wrist targets directly.</p>
+          <figure>
+            <a href="/assets/forge/20261103/contact-adaptation.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/contact-adaptation.png" alt="Foam-box lifting with and without force feedback, force-gauge setup, and signed planar-load evaluation." loading="lazy"></a>
+            <figcaption>Left: feedback-enabled and feedback-disabled foam-box lifting. Center: force-test setup. Right: signed planar loads from −30 to +30 N, with one-standard-deviation shading over ten repeats. Paper Fig. 9.</figcaption>
+          </figure>
+          <p class="scope-note">Scope: wrist-equivalent force estimation and sustained, quasi-static contact adaptation—not full-wrench sensing, dynamic impedance control, or a general force-tracking guarantee.</p>
+        </section>
+        <section id="hardware">
+          <p class="section-number">/ 07</p>
+          <h2>Tracking through changing support and contact.</h2>
+          <p>Hardware trials cover walking, squat-and-lift, and commanded planar foot placement. A separate dynamic-reaching evaluation reports wrist-position and planar foot-position RMSEs below 8 cm and 10 cm, respectively. Under the evaluated 30 N wrist push and 50 cm body drag, representative traces show transient errors followed by recovery.</p>
+          <figure>
+            <a href="/assets/forge/20261103/hardware-recovery.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/hardware-recovery.png" alt="Pelvis acceleration and wrist tracking error during walking, squat-and-lift, foot-position control, and perturbations." loading="lazy"></a>
+            <figcaption>Wrist tracking error and pelvis acceleration during a representative hardware sequence. Paper Fig. 10.</figcaption>
+          </figure>
+          <figure>
+            <a href="/assets/forge/20261103/bottle-sequence.png" target="_blank" rel="noopener"><img src="/assets/forge/20261103/bottle-sequence.png" alt="Four sequential bottle-placement frames with wrist-equivalent vertical force traces." loading="lazy"></a>
+            <figcaption>Sequential bottle placement. Force traces provide qualitative context around marked bottle releases. Paper Fig. 5.</figcaption>
+          </figure>
+        </section>
+        <section id="downstream">
+          <p class="section-number">/ 08</p>
+          <h2>A whole-body executor for learned policies.</h2>
+          <p>FORGE also serves as the joint-action executor for an upstream Diffusion Policy. The visuomotor model maps head-mounted RGB and task state to command chunks. One cross-payload model is trained on 320 demonstrations: 80 each for empty, 0.5 kg, 1 kg, and 2 kg payload conditions.</p>
+          <div class="payload-results">
+            <div><span>Empty</span><strong>20<span>/20</span></strong><small>100% success</small></div>
+            <div><span>0.5 kg</span><strong>20<span>/20</span></strong><small>100% success</small></div>
+            <div><span>1 kg</span><strong>18<span>/20</span></strong><small>90% success</small></div>
+            <div><span>2 kg</span><strong>18<span>/20</span></strong><small>90% success</small></div>
           </div>
-        </div>
-      </section>
-
-      <section class="forge-section section hero is-light" id="bibtex">
-        <div class="forge-shell citation-layout">
-          <div>
-            <h2 class="title is-3">Resources</h2>
-            <p>Paper manuscript · 8 pages · PDF</p>
-            <div class="forge-actions">
-              <a
-                class="button is-dark is-rounded"
-                href="/forge/forge-paper.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open Paper PDF ↗</a
-              >
-              <a
-                class="button is-dark is-rounded"
-                href="/forge/forge-paper.pdf"
-                download="FORGE-paper.pdf"
-                >Download PDF</a
-              >
-              <a
-                class="button is-dark is-rounded"
-                href="https://github.com/bb0928/FORGE"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Code ↗</a
-              >
-            </div>
+          <p class="caption">Paper Table V. Twenty hardware trials per payload. Success requires completing the prescribed squat-and-lift-box transport sequence without task termination or human intervention. Assuming independent trials, 95% Wilson intervals are 83.9–100% for 20/20 and 69.9–97.2% for 18/20. These results concern the tested task and 0–2 kg payload range.</p>
+        </section>
+        <section id="citation">
+          <p class="section-number">/ 09</p>
+          <h2>Read the work. Build on it.</h2>
+          <div class="resource-cards">
+            <a href="forge-paper.pdf?v=20261103" target="_blank" rel="noopener"><span>MANUSCRIPT</span><strong>Read the paper ↗</strong><small>Full method, protocols, and results · PDF</small></a>
+            <a href="https://github.com/bb0928/FORGE" target="_blank" rel="noopener"><span>REPOSITORY</span><strong>Explore the code ↗</strong><small>FORGE on GitHub</small></a>
           </div>
-          <div class="bibtex-heading"><h3>BibTeX</h3><button type="button" id="copy-bibtex" class="copy-bibtex-btn">Copy</button></div>
-          <p id="copy-status" class="copy-status" role="status"></p>
-          <pre class="bibtex"><code id="bibtex-code">@article{forge2026,
-  title   = {FORGE: Force-Aware Multi-Granularity Control for
-             Efficient Humanoid Loco-Manipulation},
-  author  = {Xing, Liangjun and Fan, Ke and Li, Kailin and Wang, Bin and
-             Niu, Xiaojie and Ben, Qingwei and Cao, Jiafei and Yao, Wei and
-             Liu, Yebin and Wang, Jingbo and Zhang, Weinan},
-  year    = {2026},
-  url     = {https://bb0928.github.io/forge/}
-}</code></pre>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer forge-footer">
-      <p>FORGE · Force-aware humanoid loco-manipulation</p>
-      <p>
-        <a href="/">Liangjun Xing</a> ·
-        <a
-          href="https://github.com/bb0928/FORGE"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >
-      </p>
-      <p class="template-credit">Website adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> and <a href="https://nerfies.github.io/">Nerfies</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
-    </footer>
-  </body>
+          <div class="citation-header"><h3>BibTeX</h3><button id="copy-citation" type="button">Copy citation</button><span id="copy-status" role="status" aria-live="polite"></span></div>
+          <pre id="bibtex">@misc{xing2026forge,
+  title = {FORGE: Force-Aware Multi-Granularity Control
+           for Efficient Humanoid Loco-Manipulation},
+  author = {Xing, Liangjun and Fan, Ke and Li, Kailin and
+            Wang, Bin and Niu, Xiaojie and Ben, Qingwei and
+            Cao, Jiafei and Yao, Wei and Liu, Yebin and
+            Wang, Jingbo and Zhang, Weinan},
+  year = {2026},
+  url = {https://bb0928.github.io/forge/}
+}</pre>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer><a class="wordmark" href="/forge/">FORGE</a><span>Force-aware humanoid loco-manipulation</span><a href="#hero-title">Back to top ↑</a></footer>
+</body>
 </html>
