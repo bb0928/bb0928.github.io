@@ -9,19 +9,19 @@
   <meta property="og:image" content="https://bb0928.github.io/assets/forge/20261103/teaser.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bb0928.github.io/forge/">
-  <meta name="theme-color" content="#f4f8ff">
+  <meta name="theme-color" content="#f5eee6">
   <link rel="canonical" href="https://bb0928.github.io/forge/">
-  <link rel="stylesheet" href="/forge/project.css?v=20261103">
+  <link rel="stylesheet" href="/forge/project.css?v=20261104">
   <script defer src="/forge/project.js?v=20261103"></script>
   <title>FORGE — Force-Aware Humanoid Loco-Manipulation</title>
 </head>
 <body>
   <a class="skip-link" href="#overview">Skip to research</a>
   <header class="topbar">
-    <a class="wordmark" href="/forge/" aria-label="FORGE project home">F<span class="brand-cut">/</span>ORGE</a>
+    <a class="wordmark" href="/forge/" aria-label="FORGE project home">FORGE</a>
     <nav aria-label="Primary navigation">
       <a href="#overview">Research</a>
-      <a href="#demonstration">Demonstration</a>
+      <a href="#video">Demonstration</a>
       <a href="forge-paper.pdf?v=20261103" target="_blank" rel="noopener">Paper ↗</a>
     </nav>
   </header>
@@ -34,14 +34,14 @@
         <div class="resource-links">
           <a href="forge-paper.pdf?v=20261103" target="_blank" rel="noopener">↗ Paper</a>
           <a href="https://github.com/bb0928/FORGE" target="_blank" rel="noopener">↗ GitHub</a>
-          <a href="#demonstration">▷ Video</a>
+          <a href="#video">▷ Video</a>
         </div>
       </div>
-      <figure class="hero-media">
-        <a href="/assets/forge/20261103/teaser.png" target="_blank" rel="noopener">
-          <img src="/assets/forge/20261103/teaser.png" alt="FORGE on hardware: carrying a box, erasing a whiteboard, peeling a cucumber, and placing bottles." width="1371" height="840" fetchpriority="high">
-        </a>
-        <figcaption>Locomotion, task-space tracking, and contact interaction on the same platform.</figcaption>
+      <figure class="hero-media" id="video">
+        <div class="video-shell">
+          <img src="/assets/forge/20261103/teaser.png" alt="FORGE hardware demonstration preview: carrying, erasing, peeling, and bottle placement." width="1371" height="840" fetchpriority="high">
+        </div>
+        <figcaption>FORGE in action. Video temporarily unavailable. <a href="https://www.bilibili.com/video/BV1qkYa6zEx6/" target="_blank" rel="noopener">Bilibili source ↗</a></figcaption>
       </figure>
       <a class="scroll-link" href="#overview">Explore the research <span>↓</span></a>
     </section>
@@ -51,7 +51,7 @@
       <p class="authors">Liangjun Xing<sup>1,2,*</sup>, Ke Fan<sup>1,4,*</sup>, Kailin Li<sup>1,*</sup>, Bin Wang<sup>1,3</sup>, Xiaojie Niu<sup>1</sup>, Qingwei Ben<sup>1,5</sup>, Jiafei Cao<sup>1</sup>, Wei Yao<sup>2</sup>, Yebin Liu<sup>2,†</sup>, Jingbo Wang<sup>1,†</sup>, Weinan Zhang<sup>1,†</sup></p>
       <p class="affiliations"><sup>1</sup>Shanghai AI Laboratory · <sup>2</sup>Tsinghua University · <sup>3</sup>Zhejiang University · <sup>4</sup>Shanghai Jiao Tong University · <sup>5</sup>The Chinese University of Hong Kong</p>
       <p class="affiliations">* Equal contribution &nbsp; † Corresponding authors</p>
-      <div class="article-meta"><span>Manuscript · 8 pages</span><span>Page updated November 3, 2026</span><a href="#citation">Cite this work ↙</a></div>
+      <div class="article-meta"><span>Manuscript · 8 pages</span><span>Page updated November 4, 2026</span><a href="#citation">Cite this work ↙</a></div>
     </div>
     <div class="research-layout">
       <aside class="contents">
@@ -85,10 +85,12 @@
           <p class="section-number">/ 02</p>
           <h2>On the robot.</h2>
           <p>Hardware demonstrations span locomotion while carrying, whiteboard erasing, cucumber peeling, and sequential bottle placement. The video provides qualitative examples; the controlled evaluations are reported separately below.</p>
-          <div class="video-shell">
-            <iframe src="https://player.bilibili.com/player.html?bvid=BV1qkYa6zEx6&amp;page=1&amp;autoplay=0&amp;danmaku=0" title="FORGE hardware demonstration" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <p class="caption">FORGE hardware demonstration. <a href="https://www.bilibili.com/video/BV1qkYa6zEx6/" target="_blank" rel="noopener">Watch on Bilibili ↗</a></p>
+          <figure>
+            <a href="/assets/forge/20261103/teaser.png" target="_blank" rel="noopener">
+              <img src="/assets/forge/20261103/teaser.png" alt="FORGE on hardware: carrying a box, erasing a whiteboard, peeling a cucumber, and placing bottles." width="1371" height="840" loading="lazy">
+            </a>
+            <figcaption>Locomotion, task-space tracking, and contact interaction on the same platform. <a href="#video">Watch the demonstration ↑</a></figcaption>
+          </figure>
         </section>
         <section id="controller">
           <p class="section-number">/ 03</p>
