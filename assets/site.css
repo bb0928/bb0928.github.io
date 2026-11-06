@@ -569,11 +569,6 @@ footer {
   text-wrap: balance;
 }
 
-.homepage .paragraph-tail {
-  white-space: nowrap;
-  text-wrap: nowrap;
-}
-
 .homepage .button:not(.primary) {
   color: var(--primary);
 }
