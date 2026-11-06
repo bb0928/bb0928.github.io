@@ -12,8 +12,8 @@
     main { width: min(1120px, calc(100% - 32px)); margin: 36px auto 48px; }
     a { color: #3d5a80; text-underline-offset: 3px; }
     h1 { margin: 24px 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.2; }
-    video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #101211; }
-    a:focus-visible, video:focus-visible { outline: 2px solid #3d5a80; outline-offset: 4px; }
+    iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; background: #101211; }
+    a:focus-visible, iframe:focus-visible { outline: 2px solid #3d5a80; outline-offset: 4px; }
     @media (max-width: 600px) { main { margin-top: 24px; } }
   </style>
 </head>
@@ -21,10 +21,7 @@
   <main>
     <a href="/#memory-in-motion">&larr; Liangjun Xing</a>
     <h1>Memory in Motion</h1>
-    <video controls playsinline preload="metadata" poster="poster.jpg" aria-label="Memory in Motion real-robot demonstration video">
-      <source src="memory-in-motion-demo.mp4" type="video/mp4" />
-      <a href="memory-in-motion-demo.mp4">Download the video</a> to watch it in your video player.
-    </video>
+    <iframe src="https://memory-in-motion-video-xing.awake-lime-4156.chatgpt.site/?embed=1&amp;v=hls3" title="Memory in Motion real-robot demonstration video" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
   </main>
 </body>
 </html>
